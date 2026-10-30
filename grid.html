@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Adeh Riley — Film &amp; AI Video Editor">
+<meta property="og:description" content="Brand films, documentaries and live events from Abuja. Lead creative at The Urban Mindset.">
+<meta property="og:image" content="https://theurbanmindset.github.io/assets/hero-poster.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo.png">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Adeh Riley Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Adeh Riley — Film &amp; AI Video Editor, Independent Filmmaker and Cinematographer. Lead creative at The Urban Mindset, Abuja.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a gateway. Home is one full screen of film with doors to Work, Behind the Scenes, About, Contact; each door opens its own room. Single dark brand look. */
+:root{
+  --ink:#1A130D;       /* ground, logo brown */
+  --panel:#241A12;     /* raised surface */
+  --line:#4A3B2C;      /* hairline */
+  --cream:#F2EBDD;     /* text */
+  --muted:#C2B5A2;     /* secondary text */
+  --gold:#C99A5B;      /* accent */
+  --wine:#6B1F2B;      /* burgundy */
+  --wine-deep:#2A1317; /* burgundy panel */
+  --wine-line:#4E262C;
+  --display:'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --body:'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --wrap:1200px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance}
+h2{font-size:clamp(40px,6vw,72px);line-height:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;font:600 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);background:transparent;color:var(--cream);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--wine);border-color:var(--wine)}
+.btn.solid{background:var(--gold);color:var(--ink)}
+.btn.solid:hover{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+
+/* ---------- top bar (shared) ---------- */
+.bar{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.bar .logo img{height:42px;width:auto;display:block}
+.bar .right{display:flex;align-items:center;gap:14px}
+.menu-btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 4px;font:600 12px/1 var(--body);letter-spacing:.24em;text-transform:uppercase}
+.menu-btn i{display:grid;gap:5px}
+.menu-btn i::before,.menu-btn i::after{content:"";display:block;width:24px;height:1.5px;background:var(--cream)}
+.bar .start{min-height:42px;padding:0 18px;font-size:11px}
+@media (max-width:520px){.bar .start{display:none}}
+body.inner .bar{background:rgba(26,19,13,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+
+/* ---------- dropdown menu ---------- */
+.overlay{position:fixed;z-index:55;top:calc(72px + env(safe-area-inset-top,0px));right:max(20px,env(safe-area-inset-right,0px));width:min(320px,calc(100% - 40px));background:rgba(42,19,23,.97);border:1px solid var(--wine-line);box-shadow:0 18px 40px rgba(0,0,0,.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.overlay ol{list-style:none;margin:0;padding:6px 0}
+.overlay a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-height:52px;padding:10px 22px;text-decoration:none;font-family:var(--display);font-size:26px;line-height:1.1}
+.overlay li+li a{border-top:1px solid var(--wine-line)}
+.overlay a span{font:600 10px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.overlay a:hover,.overlay a[aria-current="page"]{color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){.overlay:not([hidden]){animation:drop .18s ease-out}@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}}
+
+/* ---------- views ---------- */
+.view{min-height:100%}
+.view[hidden]{display:none!important}
+
+/* home */
+#home{position:relative;height:100vh;height:100svh;min-height:600px;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end}
+#home video,#home .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+#home::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(26,19,13,.88) 0%,rgba(26,19,13,.45) 30%,rgba(26,19,13,0) 58%,rgba(26,19,13,0) 82%,rgba(26,19,13,.35) 100%)}
+.home-in{display:flex;flex-direction:column;gap:28px;padding-block:120px 28px}
+.home-copy{display:flex;flex-direction:column;gap:14px}
+.home-copy h1{font-size:clamp(64px,12vw,160px);line-height:.86;letter-spacing:-.01em}
+.home-copy h1 em{color:var(--gold)}
+.roles{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.roles span+span::before{content:"·";color:var(--gold);margin-right:14px}
+.home-copy p{max-width:50ch;margin:0;color:var(--muted);font-size:17px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.doors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(242,235,221,.25)}
+.door{display:flex;flex-direction:column;gap:6px;padding:20px 20px 18px 0;text-decoration:none;min-width:0;transition:color .2s}
+.door+.door{padding-left:20px;border-left:1px solid rgba(242,235,221,.25)}
+.door b{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.4vw,30px);line-height:1.1}
+.door span{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.door:hover b{color:var(--gold)}
+@media (max-width:760px){.doors{grid-template-columns:repeat(2,minmax(0,1fr))}.door:nth-child(3){padding-left:0;border-left:0}.door:nth-child(n+3){border-top:1px solid rgba(242,235,221,.25)}}
+/* phone: centred, calm hero like a title card */
+@media (max-width:640px){
+  #home{height:auto;min-height:100vh;min-height:100svh;justify-content:center}
+  #home::after{background:linear-gradient(to bottom,rgba(26,19,13,.55) 0%,rgba(26,19,13,.35) 35%,rgba(26,19,13,.55) 65%,rgba(26,19,13,.92) 100%)}
+  .home-in{padding-block:calc(96px + env(safe-area-inset-top,0px)) 20px;gap:36px;flex:1;justify-content:space-between}
+  .home-copy{align-items:center;text-align:center;gap:14px;margin-top:auto}
+  .home-copy .eyebrow{font-size:11px;letter-spacing:.32em}
+  .home-copy h1{font-size:clamp(52px,16vw,72px);line-height:.95}
+  .roles{flex-direction:column;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.22em;color:var(--muted)}
+  .roles span+span::before{content:none}
+  .ctas{flex-direction:column;align-items:center;gap:10px;margin-top:8px}
+  .ctas .btn{min-width:220px;min-height:46px;font-size:12px}
+  .doors{margin-top:auto}
+  .door{padding:14px 12px 12px 0;gap:2px}
+  .door+.door{padding-left:12px}
+  .door b{font-size:20px}
+  .door span{font-size:9.5px;letter-spacing:.2em}
+  .bar .logo img{height:34px}
+}
+
+/* inner rooms */
+.room .wrap{padding-block:calc(76px + 64px + env(safe-area-inset-top,0px)) 88px}
+.room-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:44px}
+.room-head p{max-width:46ch;margin:0;color:var(--muted)}
+.next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:72px;padding-top:28px}
+.next a{font-family:var(--display);font-size:clamp(28px,4vw,44px);text-decoration:none}
+.next a:hover{color:var(--gold)}
+
+/* work */
+.feature{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);border:1px solid var(--wine-line);background:var(--wine-deep);margin-bottom:28px}
+.feature button{all:unset;cursor:pointer;position:relative;display:block;aspect-ratio:16/9;max-width:100%;overflow:hidden}
+.feature button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.feature img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.feature button:hover img{transform:scale(1.03)}
+.play{position:absolute;left:24px;bottom:24px;display:flex;align-items:center;gap:12px;font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--cream)}
+.play i{width:52px;height:52px;border-radius:50%;border:1px solid var(--cream);display:grid;place-items:center;background:var(--wine)}
+.feature .txt{padding:32px;display:flex;flex-direction:column;gap:14px;justify-content:center;min-width:0}
+.feature h3{font-size:clamp(30px,3.4vw,42px);line-height:1.05}
+.feature p{margin:0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--wine-line);padding:6px 10px;color:var(--muted)}
+@media (max-width:820px){.feature{grid-template-columns:minmax(0,1fr)}}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:860px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+.card{display:flex;flex-direction:column;gap:12px;text-decoration:none;min-width:0}
+.card figure{margin:0;position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--panel)}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .6s;filter:saturate(.92)}
+.card:hover img{transform:scale(1.04);filter:saturate(1.05)}
+.card .fmt{position:absolute;top:10px;left:10px;font:600 10px/1 var(--body);letter-spacing:.16em;padding:6px 8px;background:rgba(26,19,13,.72);color:var(--cream)}
+.card h3{font-size:21px;line-height:1.12}
+.card .meta{display:flex;justify-content:space-between;gap:8px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card .meta b{color:var(--gold);font-weight:600}
+@media (max-width:600px){.card h3{font-size:18px}.card .meta{font-size:10.5px}}
+
+/* bts */
+#bts{background:var(--wine-deep)}
+#bts .room-head p{color:var(--muted)}
+.film-tag{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;border-block:1px solid var(--wine-line);padding-block:18px;margin-bottom:28px}
+.film-tag h3{font-size:clamp(26px,3vw,36px)}
+.film-tag span{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.sheet{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:170px;gap:12px}
+.sheet figure{margin:0;position:relative;overflow:hidden;grid-row:span 2}
+.sheet img{width:100%;height:100%;object-fit:cover;display:block}
+.sheet figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 10px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(to top,rgba(26,13,15,.85),rgba(26,13,15,0))}
+.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}
+@media (max-width:720px){.sheet{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:140px}.sheet figure{grid-column:span 2}.sheet .tall{grid-row:span 3}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.about .photo{border:1px solid var(--gold);padding:10px;max-width:420px}
+.about .photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.about .copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.about .copy>p{margin:0;color:var(--muted);max-width:62ch;font-size:17px}
+.about .copy>p strong{color:var(--cream);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;border-top:1px solid var(--line);padding-top:24px}
+.facts h4{margin:0 0 10px;font:600 11px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.facts ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.facts li span{color:var(--muted);display:block;font-size:13px}
+@media (max-width:820px){.about{grid-template-columns:minmax(0,1fr);gap:32px}.facts{grid-template-columns:minmax(0,1fr)}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.lines{display:flex;flex-direction:column;gap:22px}
+.lines>div{display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line);padding-bottom:18px;min-width:0}
+.lines .eyebrow{font-size:11px}
+.lines .val{font-size:19px;font-weight:600;overflow-wrap:anywhere;user-select:all}
+.lines a.val{text-decoration:none}
+.lines a.val:hover{color:var(--gold)}
+.copy-btn{all:unset;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);align-self:flex-start;padding-bottom:2px}
+.copy-btn:hover{color:var(--cream)}
+form{display:flex;flex-direction:column;gap:16px;background:var(--wine-deep);border:1px solid var(--wine-line);padding:28px}
+form h3{font-size:30px}
+form p{margin:0;color:var(--muted);font-size:14px}
+label{display:flex;flex-direction:column;gap:6px;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+input,select,textarea{font:500 16px/1.4 var(--body);color:var(--cream);background:var(--ink);border:1px solid var(--line);padding:12px 14px;border-radius:0;width:100%;letter-spacing:normal;text-transform:none}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:110px;resize:vertical}
+@media (max-width:820px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px;font-size:13px;color:var(--muted)}
+#home ~ footer{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(10,7,4,.95);display:grid;place-items:center;padding:max(20px,env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px))}
+.lb video{width:min(1200px,100%);max-height:80vh;background:#000}
+.lb .close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:calc(16px + env(safe-area-inset-right,0px))}
+.lb p{margin:14px 0 0;color:var(--muted);font-size:13px;text-align:center}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Home"><img src="assets/logo.png" alt="The Urban Mindset"></a>
+    <div class="right">
+      <a class="btn start" href="#contact">Start a project</a>
+      <button class="menu-btn" type="button" id="menuOpen" aria-expanded="false" aria-controls="overlay">Menu <i aria-hidden="true"></i></button>
+    </div>
+  </div>
+</header>
+
+<nav class="overlay" id="overlay" aria-label="Main" hidden>
+  <ol>
+    <li><a href="#home">Home <span>Start</span></a></li>
+    <li><a href="#work">Work <span>Films</span></a></li>
+    <li><a href="#bts">Behind the scenes <span>On set</span></a></li>
+    <li><a href="#about">About <span>The person</span></a></li>
+    <li><a href="#contact">Contact <span>Let's talk</span></a></li>
+  </ol>
+</nav>
+
+<main>
+  <!-- HOME -->
+  <section class="view" id="home" aria-label="Home">
+    <img class="poster" src="assets/hero-poster.jpg" alt="">
+    <video id="heroVid" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <div class="wrap home-in">
+      <div class="home-copy">
+        <div class="eyebrow">Film · Edit · Frame</div>
+        <h1>Adeh <em>Riley</em></h1>
+        <div class="roles"><span>Film &amp; AI Video Editor</span><span>Independent Filmmaker</span><span>Cinematographer</span></div>
+        <div class="ctas"><a class="btn solid" href="#work">Explore the work</a><a class="btn" href="#contact">Start a project</a></div>
+      </div>
+      <nav class="doors" aria-label="Sections">
+        <a class="door" href="#work"><span>Films</span><b>Work →</b></a>
+        <a class="door" href="#bts"><span>On set</span><b>Behind the scenes →</b></a>
+        <a class="door" href="#about"><span>The person</span><b>About →</b></a>
+        <a class="door" href="#contact"><span>Let's talk</span><b>Contact →</b></a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="view room" id="work" aria-labelledby="work-h" hidden>
+    <div class="wrap">
+      <div class="room-head">
+        <div><div class="eyebrow">Work</div><h2 id="work-h">Selected films</h2></div>
+        <p>Corporate brand films, event coverage, documentaries and short-form reels. Tap a project to watch it.</p>
+      </div>
+      <article class="feature">
+        <button type="button" id="playTorah" aria-label="Play the Torah Holdings brand film">
+          <img src="assets/torah.jpg" alt="Night aerial of the Torah Homz estate" loading="lazy">
+          <span class="play"><i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg></i>Watch the film</span>
+        </button>
+        <div class="txt">
+          <div class="eyebrow">Featured · 2026</div>
+          <h3>Torah Holdings Brand Film</h3>
+          <p>A corporate brand film for Torah Holdings and its six subsidiaries, from construction and real estate to finance, hospitality, renewable energy and media. One family's dream told as one continuous story.</p>
+          <div class="chips"><span class="chip">Concept</span><span class="chip">Direction</span><span class="chip">Edit &amp; AI</span><span class="chip">16:9 · 4K</span></div>
+        </div>
+      </article>
+      <div class="grid">
+        <a class="card" href="https://www.behance.net/gallery/239072227/GATES-FOUNDATION" target="_blank" rel="noopener"><figure><img src="assets/gates.jpg" alt="" loading="lazy"><span class="fmt">16:9</span></figure><h3>Gates Foundation CEO Roundtable</h3><div class="meta"><span>2025</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239070965/YEEP-SUMMIT-25" target="_blank" rel="noopener"><figure><img src="assets/yeep.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>YEEP Summit</h3><div class="meta"><span>2025</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239073373/African-Chovken-Championship-25" target="_blank" rel="noopener"><figure><img src="assets/acc.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>African Chovken Championship</h3><div class="meta"><span>2025</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239057251/Abuja-National-Carnival-Polo-Tournament-24" target="_blank" rel="noopener"><figure><img src="assets/polo.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>Abuja National Carnival Polo Tournament</h3><div class="meta"><span>2024</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/252667663/CTRL_conversation" target="_blank" rel="noopener"><figure><img src="assets/ctrl.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>CTRL_conversation</h3><div class="meta"><span>Series</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/253584179/State-of-the-FCT" target="_blank" rel="noopener"><figure><img src="assets/fct.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>State of the FCT</h3><div class="meta"><span>Broadcast</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239068363/ASKUNI-Education-Fair" target="_blank" rel="noopener"><figure><img src="assets/askuni.jpg" alt="" loading="lazy"><span class="fmt">16:9</span></figure><h3>ASKUNI Education Fair</h3><div class="meta"><span>Event</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239070169/The-Fatoyinbos-Anniversary" target="_blank" rel="noopener"><figure><img src="assets/fatoyinbo.jpg" alt="" loading="lazy"><span class="fmt">16:9</span></figure><h3>The Fatoyinbo's Anniversary</h3><div class="meta"><span>Celebration</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239016793/Sunset-in-Agbor-with-TIFE" target="_blank" rel="noopener"><figure><img src="assets/agbor.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>Sunset in Agbor with TIFE</h3><div class="meta"><span>Lifestyle</span><b>Watch ↗</b></div></a>
+        <a class="card" href="https://www.behance.net/gallery/239046991/Idoma-International-Carnival-24" target="_blank" rel="noopener"><figure><img src="assets/idoma.jpg" alt="" loading="lazy"><span class="fmt">16:9</span></figure><h3>Idoma International Carnival</h3><div class="meta"><span>2024</span><b>Watch ↗</b></div></a>
+      </div>
+      <div class="next"><span class="eyebrow">Next room</span><a href="#bts">Behind the scenes →</a></div>
+    </div>
+  </section>
+
+  <!-- BTS -->
+  <section class="view room" id="bts" aria-labelledby="bts-h" hidden>
+    <div class="wrap">
+      <div class="room-head">
+        <div><div class="eyebrow">Behind the scenes</div><h2 id="bts-h">On set</h2></div>
+        <p>Rigging, framing and running camera with the crew. The work that never makes the final cut.</p>
+      </div>
+      <div class="film-tag"><h3>The Book of Nehemiah</h3><span>Afrobeat musical film</span><span>Not yet released online</span></div>
+      <div class="sheet">
+        <figure class="s8"><img src="assets/bts1.jpg" alt="Adeh Riley on location with the camera team" loading="lazy"><figcaption>On location</figcaption></figure>
+        <figure class="s4 tall"><img src="assets/bts2.jpg" alt="Adeh Riley checking camera settings with the Steadicam operator" loading="lazy"><figcaption>Camera check</figcaption></figure>
+        <figure class="s6"><img src="assets/bts3.jpg" alt="Adeh Riley going over a scene with the executive producer" loading="lazy"><figcaption>Notes from the executive producer</figcaption></figure>
+        <figure class="s6"><img src="assets/bts4.jpg" alt="Adeh Riley with the crew behind camera" loading="lazy"><figcaption>Blocking the shot</figcaption></figure>
+        <figure class="s4"><img src="assets/bts5.jpg" alt="Crew lighting a smoky night exterior" loading="lazy"><figcaption>Night exterior</figcaption></figure>
+        <figure class="s4"><img src="assets/bts6.jpg" alt="Adeh Riley at the monitors on location" loading="lazy"><figcaption>At the monitors</figcaption></figure>
+        <figure class="s4"><img src="assets/bts7.jpg" alt="Crew setting up a camera crane" loading="lazy"><figcaption>Crane setup</figcaption></figure>
+        <figure class="s6"><img src="assets/bts8.jpg" alt="Adeh Riley directing a shot in an interior set" loading="lazy"><figcaption>Setting the frame</figcaption></figure>
+        <figure class="s6"><img src="assets/bts9.jpg" alt="Steadicam shot with the dancers" loading="lazy"><figcaption>Steadicam with the dancers</figcaption></figure>
+      </div>
+      <div class="next"><span class="eyebrow">Next room</span><a href="#about">About →</a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="view room" id="about" aria-labelledby="about-h" hidden>
+    <div class="wrap about">
+      <div class="photo"><img src="assets/portrait.jpg" alt="Portrait of Adeh Riley" loading="lazy"></div>
+      <div class="copy">
+        <div class="eyebrow">About</div>
+        <h2 id="about-h">Stories, told with care.</h2>
+        <p>I'm <strong>Adeh Riley</strong>, an independent filmmaker and results-oriented editor with over seven years of experience across studios, brands and events. I bring clients' visions to life through detailed storytelling, from the first idea to the final grade.</p>
+        <p>I'm the lead creative at <strong>The Urban Mindset</strong> in Abuja, working on brand films, documentaries, consultations and live events. I use AI tools alongside traditional craft to deliver crisp, clean footage and sound.</p>
+        <div class="facts">
+          <div>
+            <h4>Experience</h4>
+            <ul>
+              <li>Lead Creative<span>The Urban Mindset</span></li>
+              <li>Video Editor / Creative Director<span>Hawthorn Studios · 2018 – Present</span></li>
+              <li>Video Editor / Media Consultant<span>Netizen Technology · 2019 – 2021</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Craft &amp; tools</h4>
+            <ul>
+              <li>Editing, colour grading &amp; sound design</li>
+              <li>Premiere Pro, DaVinci Resolve, After Effects</li>
+              <li>Photoshop, CapCut, Canva</li>
+              <li>AI video &amp; audio tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap"><div class="next" style="margin-top:0"><span class="eyebrow">Next room</span><a href="#contact">Contact →</a></div></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="view room" id="contact" aria-labelledby="contact-h" hidden>
+    <div class="wrap">
+      <div class="room-head">
+        <div><div class="eyebrow">Contact</div><h2 id="contact-h">Let's make something worth watching.</h2></div>
+      </div>
+      <div class="contact-grid">
+        <div class="lines">
+          <div><span class="eyebrow">Email</span><span class="val">adehriley@gmail.com</span><button class="copy-btn" type="button" data-copy="adehriley@gmail.com">Copy email</button></div>
+          <div><span class="eyebrow">Phone / WhatsApp</span><span class="val">+234 916 676 6454</span><button class="copy-btn" type="button" data-copy="+2349166766454">Copy number</button></div>
+          <div><span class="eyebrow">Instagram</span><a class="val" href="https://www.instagram.com/theurbanmindset" target="_blank" rel="noopener">@theurbanmindset ↗</a></div>
+          <div><span class="eyebrow">Behance</span><a class="val" href="https://www.behance.net/urbanmindset" target="_blank" rel="noopener">behance.net/urbanmindset ↗</a></div>
+        </div>
+        <form id="brief" novalidate>
+          <h3>Start a project</h3>
+          <p>Tell me a little about it and send it straight to my WhatsApp.</p>
+          <label for="fName">Your name<input id="fName" name="name" autocomplete="name" placeholder="Name"></label>
+          <label for="fType">Project type
+            <select id="fType" name="type">
+              <option>Brand film or commercial</option>
+              <option>Event coverage</option>
+              <option>Documentary</option>
+              <option>Wedding or celebration</option>
+              <option>Editing only</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label for="fMsg">About the project<textarea id="fMsg" name="msg" placeholder="Date, location, what you have in mind"></textarea></label>
+          <a class="btn solid" id="waLink" href="https://wa.me/2349166766454" target="_blank" rel="noopener">Send on WhatsApp ↗</a>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Adeh Riley · The Urban Mindset</span><span>Gwarinpa, Abuja</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Torah Holdings brand film">
+  <button class="btn close" type="button" id="lbClose">Close</button>
+  <div>
+    <video id="lbVid" controls playsinline preload="none" poster="assets/torah.jpg"><source src="assets/torah-film.mp4" type="video/mp4"></video>
+    <p>Torah Holdings brand film · 2026</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var views=['home','work','bts','about','contact'];
+  var foot=document.querySelector('footer');
+  var hv=document.getElementById('heroVid');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function show(){
+    var id=(location.hash||'').slice(1); if(views.indexOf(id)<0) id='home';
+    views.forEach(function(v){document.getElementById(v).hidden=(v!==id);});
+    document.body.classList.toggle('inner',id!=='home');
+    foot.hidden=(id==='home');
+    document.querySelectorAll('.overlay a').forEach(function(a){a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+id); if(a.hasAttribute('aria-current'))a.setAttribute('aria-current','page');});
+    if(hv){ if(id==='home'&&!reduce){try{hv.play()}catch(e){}} else hv.pause(); }
+    window.scrollTo(0,0);
+    closeMenu(true);
+  }
+  var ov=document.getElementById('overlay'),mo=document.getElementById('menuOpen');
+  function openMenu(){ov.hidden=false;mo.setAttribute('aria-expanded','true');mo.firstChild.nodeValue='Close ';}
+  function closeMenu(silent){if(ov.hidden)return;ov.hidden=true;mo.setAttribute('aria-expanded','false');mo.firstChild.nodeValue='Menu ';if(!silent)mo.focus();}
+  mo.addEventListener('click',function(e){e.stopPropagation();ov.hidden?openMenu():closeMenu();});
+  document.addEventListener('click',function(e){if(!ov.hidden&&!ov.contains(e.target))closeMenu(true);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  window.addEventListener('hashchange',show);
+  if(reduce&&hv){hv.removeAttribute('autoplay');hv.pause();}
+  show();
+
+  var lb=document.getElementById('lb'),v=document.getElementById('lbVid'),op=document.getElementById('playTorah');
+  function lbOpen(){lb.hidden=false;try{v.play()}catch(e){}document.getElementById('lbClose').focus();}
+  function lbClose(){lb.hidden=true;v.pause();op.focus();}
+  op.addEventListener('click',lbOpen);
+  document.getElementById('lbClose').addEventListener('click',lbClose);
+  lb.addEventListener('click',function(e){if(e.target===lb)lbClose();});
+  lb.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
+
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'),orig=b.textContent;
+      function done(){b.textContent='Copied';setTimeout(function(){b.textContent=orig},1600);}
+      function fallback(){var el=b.previousElementSibling,r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';setTimeout(function(){b.textContent=orig},2000);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else{fallback();}
+    });
+  });
+
+  var f=document.getElementById('brief'),wa=document.getElementById('waLink');
+  function build(){
+    var n=document.getElementById('fName').value.trim(),t=document.getElementById('fType').value,m=document.getElementById('fMsg').value.trim();
+    var txt='Hi Adeh, '+(n?'I\'m '+n+'. ':'')+'I\'d like to talk about a project ('+t+').'+(m?'\n\n'+m:'');
+    wa.href='https://wa.me/2349166766454?text='+encodeURIComponent(txt);
+  }
+  f.addEventListener('input',build); f.addEventListener('change',build);
+  f.addEventListener('submit',function(e){e.preventDefault();});
+  build();
+})();
+</script>
+
+</body>
+</html>
