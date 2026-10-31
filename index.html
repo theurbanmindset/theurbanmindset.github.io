@@ -231,7 +231,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <!-- HOME -->
   <section class="view" id="home" aria-label="Home">
     <img class="poster" src="assets/hero-poster.jpg" alt="">
-    <video id="heroVid" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video>
+    <video id="heroVid" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true"><source src="assets/hero-m.mp4" type="video/mp4" media="(max-width: 900px)"><source src="assets/hero.mp4" type="video/mp4"></video>
     <div class="wrap home-in">
       <div class="home-copy">
         <div class="eyebrow">Film · Edit · Frame</div>
@@ -420,6 +420,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   mo.addEventListener('click',function(e){e.stopPropagation();ov.hidden?openMenu():closeMenu();});
   document.addEventListener('click',function(e){if(!ov.hidden&&!ov.contains(e.target))closeMenu(true);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  if(hv){hv.muted=true;hv.defaultMuted=true;
+    var tryPlay=function(){var pr=hv.play&&hv.play();if(pr&&pr.catch)pr.catch(function(){});};
+    hv.addEventListener('loadeddata',tryPlay);
+    ['touchstart','click','scroll'].forEach(function(ev){document.addEventListener(ev,function once(){if(hv.paused&&!document.getElementById('home').hidden&&!reduce)tryPlay();document.removeEventListener(ev,once);},{passive:true});});
+  }
   window.addEventListener('hashchange',show);
   if(reduce&&hv){hv.removeAttribute('autoplay');hv.pause();}
   show();
