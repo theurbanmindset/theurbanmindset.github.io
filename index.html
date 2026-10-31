@@ -115,6 +115,7 @@ body.inner .bar{background:rgba(26,19,13,.9);backdrop-filter:blur(10px);-webkit-
 .room .wrap{padding-block:calc(76px + 64px + env(safe-area-inset-top,0px)) 88px}
 .room-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:44px}
 .room-head p{max-width:46ch;margin:0;color:var(--muted)}
+.more{margin:40px 0 0;text-align:center}.more a{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--gold);text-decoration:none;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase}.more a:hover{background:var(--wine);border-color:var(--wine)}
 .next{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:72px;padding-top:28px}
 .next a{font-family:var(--display);font-size:clamp(28px,4vw,44px);text-decoration:none}
 .next a:hover{color:var(--gold)}
@@ -201,16 +202,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .lb video{width:min(1200px,100%);max-height:80vh;background:#000}
 .lb .close{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:calc(16px + env(safe-area-inset-right,0px))}
 .lb p{margin:14px 0 0;color:var(--muted);font-size:13px;text-align:center}
-
-/* phone: single-row menu pill instead of the 2x2 doors */
-.pillnav{display:none}
-@media (max-width:640px){
-  .doors{display:none}
-  .pillnav{display:flex;align-self:center;margin-top:auto;border:1px solid rgba(242,235,221,.35);border-radius:999px;background:rgba(26,19,13,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:4px;max-width:100%}
-  .pillnav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:999px;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
-  .pillnav a:hover,.pillnav a:focus-visible{background:var(--gold);color:var(--ink)}
-}
-@media (max-width:360px){.pillnav a{padding:0 10px;font-size:10px;letter-spacing:.12em}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
@@ -248,9 +239,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <div class="roles"><span>Film &amp; AI Video Editor</span><span>Independent Filmmaker</span><span>Cinematographer</span></div>
         <div class="ctas"><a class="btn solid" href="#work">Explore the work</a><a class="btn" href="#contact">Start a project</a></div>
       </div>
-      <nav class="pillnav" aria-label="Sections">
-        <a href="#work">Work</a><a href="#bts">On set</a><a href="#about">About</a><a href="#contact">Contact</a>
-      </nav>
       <nav class="doors" aria-label="Sections">
         <a class="door" href="#work"><span>Films</span><b>Work →</b></a>
         <a class="door" href="#bts"><span>On set</span><b>Behind the scenes →</b></a>
@@ -291,6 +279,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <a class="card" href="https://www.behance.net/gallery/239016793/Sunset-in-Agbor-with-TIFE" target="_blank" rel="noopener"><figure><img src="assets/agbor.jpg" alt="" loading="lazy"><span class="fmt">9:16</span></figure><h3>Sunset in Agbor with TIFE</h3><div class="meta"><span>Lifestyle</span><b>Watch ↗</b></div></a>
         <a class="card" href="https://www.behance.net/gallery/239046991/Idoma-International-Carnival-24" target="_blank" rel="noopener"><figure><img src="assets/idoma.jpg" alt="" loading="lazy"><span class="fmt">16:9</span></figure><h3>Idoma International Carnival</h3><div class="meta"><span>2024</span><b>Watch ↗</b></div></a>
       </div>
+      <p class="more"><a href="https://www.youtube.com/@theurbanmindset" target="_blank" rel="noopener">More films on YouTube ↗</a></p>
       <div class="next"><span class="eyebrow">Next room</span><a href="#bts">Behind the scenes →</a></div>
     </div>
   </section>
@@ -363,6 +352,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
           <div><span class="eyebrow">Phone / WhatsApp</span><span class="val">+234 916 676 6454</span><button class="copy-btn" type="button" data-copy="+2349166766454">Copy number</button></div>
           <div><span class="eyebrow">Instagram</span><a class="val" href="https://www.instagram.com/theurbanmindset" target="_blank" rel="noopener">@theurbanmindset ↗</a></div>
           <div><span class="eyebrow">Behance</span><a class="val" href="https://www.behance.net/urbanmindset" target="_blank" rel="noopener">behance.net/urbanmindset ↗</a></div>
+          <div><span class="eyebrow">YouTube</span><a class="val" href="https://www.youtube.com/@theurbanmindset" target="_blank" rel="noopener">@theurbanmindset ↗</a></div>
         </div>
         <form id="brief" novalidate>
           <h3>Start a project</h3>
